@@ -26,7 +26,8 @@ require('lazy').setup({
     require 'plugins.lsp',
     require 'plugins.autocompletion',
     require 'plugins.comment',
-    require 'plugins.indent'
+    require 'plugins.indent',
+    require 'plugins.conform'
   },
 }, {
   ui= {
