@@ -10,3 +10,5 @@
 - link:
     ~/.config/nvim: nvim
     ~/.config/hypr: hypr
+    ~/.config/lazygit: lazygit
+    ~/.config/ghostty: ghostty
