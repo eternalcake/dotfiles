@@ -1,0 +1,12 @@
+# Only 4 spaces!
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/nvim: nvim
+    ~/.config/hypr: hypr

@@ -3,10 +3,10 @@ vim.opt.relativenumber = true
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
-vim.opt.wrap = true -- Wrap long line
+vim.opt.wrap = true       -- Wrap long line
 vim.opt.linebreak = false -- Dont split words
 vim.g.have_nerd_font = true
-vim.opt.undofile = true -- Save undo history
+vim.opt.undofile = true   -- Save undo history
 vim.opt.cursorline = true
 vim.opt.ignorecase = true -- Case insensitive
 vim.opt.smartcase = true
@@ -51,4 +51,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank({ higroup = 'YankHighlight', timeout = 200, })
   end,
 })
-

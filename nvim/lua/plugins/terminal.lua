@@ -10,16 +10,16 @@ return {
         vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
         vim.o.shellquote = ""
         vim.o.shellxquote = ""
-      else
-        vim.o.shell = "/bin/zsh"
+        -- else
+        --   vim.o.shell = "/bin/zsh"
       end
       -- Keymap
       require("toggleterm").setup {
         open_mapping = [[<c-\>]],
       }
       -- LazyGit terminal settings
-      local Terminal  = require('toggleterm.terminal').Terminal
-      local lazygit = Terminal:new({
+      local Terminal = require('toggleterm.terminal').Terminal
+      local lazygit  = Terminal:new({
         cmd = "lazygit",
         hidden = true,
         display_name = "LazyGit",
@@ -33,7 +33,8 @@ return {
       function _lazygit_toggle()
         lazygit:toggle()
       end
-      vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+
+      vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
     end,
   }
 }
