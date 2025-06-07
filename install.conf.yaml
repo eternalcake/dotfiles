@@ -12,3 +12,5 @@
     ~/.config/hypr: hypr
     ~/.config/lazygit: lazygit
     ~/.config/ghostty: ghostty
+    ~/.config/waybar: waybar
+    ~/.zshrc: .zshrc
