@@ -13,9 +13,10 @@ else
 	end ---@diagnostic disable-next-line: undefined-field
 	vim.opt.rtp:prepend(lazypath)
 
+	is_windows = vim.loop.os_uname().sysname == "Windows_NT"
+
 	require("lazy").setup({
 		{
-			-- require 'plugins.lazydev',
 			require("plugins.telescope"),
 			require("plugins.colortheme"),
 			require("plugins.column"),
