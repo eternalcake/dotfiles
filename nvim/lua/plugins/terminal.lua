@@ -4,14 +4,11 @@ return {
 		version = "*",
 		config = function()
 			-- Set up terminal based on OS
-			local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 			if is_windows then
 				vim.o.shell = "pwsh.exe"
 				vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
 				vim.o.shellquote = ""
 				vim.o.shellxquote = ""
-				-- else
-				--   vim.o.shell = "/bin/zsh"
 			end
 			-- Keymap
 			require("toggleterm").setup({
