@@ -17,21 +17,21 @@ return {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
 
     -- Useful status updates for LSP.
-    {
-      'j-hui/fidget.nvim',
-      opts = {
-        notification = {
-          window = {
-            winblend = 0,
-            border = "none",
-            x_padding = 1,
-            y_padding = 1,
-            align = "top",
-            relative = "editor",
-          },
-        }
-      }
-    },
+    -- {
+    --   'j-hui/fidget.nvim',
+    --   opts = {
+    --     notification = {
+    --       window = {
+    --         winblend = 0,
+    --         border = "none",
+    --         x_padding = 1,
+    --         y_padding = 1,
+    --         align = "top",
+    --         relative = "editor",
+    --       },
+    --     }
+    --   }
+    -- },
 
     -- Allows extra capabilities provided by blink.cmp
     'saghen/blink.cmp',
