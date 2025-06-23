@@ -1,5 +1,7 @@
 return {
   { -- Highlight, edit, and navigate code
+    lazy = false,
+    priority = 1000,
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts

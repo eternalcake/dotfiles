@@ -19,14 +19,14 @@ else
 		{
 			require("plugins.telescope"),
 			require("plugins.colortheme"),
-			--require("plugins.column"),
+			require("plugins.column"),
 			require("plugins.treesitter"),
 			require("plugins.terminal"),
 			--require("plugins.lsp"),
-			--require("plugins.autocompletion"),
+			require("plugins.autocompletion"),
 			require("plugins.comment"),
-			require("plugins.indent"),
-			--require("plugins.conform"),
+			--require("plugins.indent"),
+			require("plugins.conform"),
 			require("plugins.obsidian"),
 		},
 	}, {

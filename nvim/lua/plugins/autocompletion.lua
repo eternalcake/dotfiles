@@ -1,5 +1,7 @@
 return { -- Autocompletion
   'saghen/blink.cmp',
+  lazy = false,
+  priority = 1000,
   event = 'VimEnter',
   version = '1.*',
   dependencies = {},
@@ -7,13 +9,18 @@ return { -- Autocompletion
   --- @type blink.cmp.Config
   opts = {
     keymap = {
+      preset = "default",
+      ["<Tab>"] = { "select_next", "fallback" },
+      ["<S-Tab>"] = { "select_prev", "fallback" },
+      ["<Enter>"] = { "select_and_accept", "fallback" },
+      ["<C-U>"] = { "scroll_documentation_up", "fallback" },
+      ["<C-D>"] = { "scroll_documentation_down", "fallback" },
       -- All presets have the following mappings:
       -- <tab>/<s-tab>: move to right/left of your snippet expansion
       -- <c-space>: Open menu or open docs if already open
       -- <c-n>/<c-p> or <up>/<down>: Select next/previous item
       -- <c-e>: Hide menu
       -- <c-k>: Toggle signature help
-      preset = 'default',
     },
 
     appearance = {
@@ -52,7 +59,7 @@ return { -- Autocompletion
 
     ghost_text = { enabled = false },
     sources = {
-      default = { 'lsp', 'path', },
+      default = { 'lsp', 'path', 'buffer' },
       providers = {
       },
     },

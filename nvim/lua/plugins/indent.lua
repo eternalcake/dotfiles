@@ -1,4 +1,6 @@
 return {
+  lazy = false,
+  priority = 1000,
   "lukas-reineke/indent-blankline.nvim",
   main = "ibl",
   ---@module "ibl"

@@ -1,5 +1,7 @@
 return {
   {
+    lazy = false,
+    priority = 1000,
     'nvim-telescope/telescope.nvim',
     tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' },
@@ -42,11 +44,11 @@ return {
       })
       require('core.keymaps.telescope')
     end,
-    lazy = false
   },
   {
+    lazy = false,
+    priority = 1000,
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-    lazy = false
   },
 }
