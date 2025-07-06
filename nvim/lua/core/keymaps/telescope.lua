@@ -1,7 +1,8 @@
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<space>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<space>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set("n", "<space>fb", function()
-	require("telescope").extensions.file_browser.file_browser()
-end
-)
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<space>ff", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<space>fg", builtin.live_grep, { desc = "Telescope live grep" })
+-- vim.keymap.set("n", "<space>fb", function()
+-- 	require("telescope").extensions.file_browser.file_browser()
+-- end
+-- )
+

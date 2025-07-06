@@ -22,6 +22,7 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 vim.opt.conceallevel = 0
+vim.api.nvim_set_option("clipboard", "unnamed")
 
 -- Set 2 tabs for specific files
 vim.api.nvim_create_autocmd("FileType", {

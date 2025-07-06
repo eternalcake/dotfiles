@@ -25,9 +25,9 @@ else
 			require("plugins.lsp"),
 			require("plugins.autocompletion"),
 			require("plugins.comment"),
-			require("plugins.indent"),
 			require("plugins.conform"),
 			require("plugins.obsidian"),
+			require("plugins.snacks"),
 		},
 	}, {
 		ui = {
