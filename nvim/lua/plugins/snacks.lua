@@ -4,7 +4,7 @@ return {
 	lazy = false,
 	---@type snacks.Config
 	opts = {
-		-- explorer = { enabled = true },
+		explorer = { enabled = true },
 		notifier = { enabled = true },
 		indent = {
 			enable = true,
@@ -17,6 +17,15 @@ return {
 					total = 10, -- maximum duration
 				},
 			},
+		},
+	},
+	keys = {
+		{
+			"<leader>e",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
 		},
 	},
 }
