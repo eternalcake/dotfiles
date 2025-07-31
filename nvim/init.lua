@@ -28,6 +28,7 @@ else
 			require("plugins.conform"),
 			require("plugins.obsidian"),
 			require("plugins.snacks"),
+			require("plugins.markdown"),
 		},
 	}, {
 		ui = {

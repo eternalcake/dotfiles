@@ -4,6 +4,7 @@ vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
 vim.opt.wrap = true -- Wrap long line
+vim.opt.textwidth = 120
 vim.opt.linebreak = false -- Dont split words
 vim.g.have_nerd_font = true
 vim.opt.undofile = true -- Save undo history
@@ -23,6 +24,8 @@ vim.opt.expandtab = true
 
 vim.opt.conceallevel = 0
 vim.api.nvim_set_option("clipboard", "unnamed")
+
+vim.opt.winborder = "rounded"
 
 -- Set 2 tabs for specific files
 vim.api.nvim_create_autocmd("FileType", {
