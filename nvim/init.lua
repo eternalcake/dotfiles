@@ -29,6 +29,7 @@ else
 			require("plugins.obsidian"),
 			require("plugins.snacks"),
 			require("plugins.markdown"),
+			-- require("plugins.oil"),
 		},
 	}, {
 		ui = {
