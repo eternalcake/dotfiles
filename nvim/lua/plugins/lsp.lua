@@ -230,7 +230,6 @@ return {
 			dockerls = {},
 			jsonls = {},
 			markdown_oxide = {},
-			yamlls = {},
 			pyright = {
 				settings = {
 					python = {
@@ -242,6 +241,7 @@ return {
 			},
 			black = {},
 			isort = {},
+			gitlab_ci_ls = {},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
