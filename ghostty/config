@@ -65,3 +65,6 @@ foreground = #ffffff
 cursor-color = #ffffff
 selection-background = #3c4048
 selection-foreground = #ffffff
+
+background-opacity = 0.8
+background-blur = false
