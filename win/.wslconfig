@@ -1,0 +1,14 @@
+[experimental]
+autoMemoryReclaim=Gradual
+
+[wsl2]
+guiApplications=false
+
+[boot]
+systemd=true
+
+[user]
+default=eternalcake
+
+[interop]
+appendWindowsPath=false

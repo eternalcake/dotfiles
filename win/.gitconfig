@@ -1,0 +1,12 @@
+[user]
+	email = eternalcake.sake@gmail.com
+	name = eternalcake
+[credential "helperselector"]
+	selected = manager
+[core]
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+	autocrlf = true
+[init]
+	defaultBranch = main
+[credential]
+	helper = store

@@ -1,0 +1,16 @@
+# Only 4 spaces!
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/AppData/Local/nvim: nvim
+    ~/AppData/Local/lazygit/config.yml: lazygit/config.yml
+    ~/AppData/Local/lazydocker/config.yml: lazydocker/config.yml
+    ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1: win/Microsoft.PowerShell_profile.ps1
+    ~/.wslconfig: win/.wslconfig
+    ~/.gitconfig: win/.gitconfig
