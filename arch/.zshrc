@@ -71,7 +71,7 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-plugins+=(zsh-vi-mode)
+#plugins+=(zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 

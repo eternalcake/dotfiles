@@ -15,7 +15,7 @@ return {
       -- Set terminal colors used in `:terminal`
       terminal_colors = false,
       -- Improve start up time by caching highlights. Generate cache with :CyberdreamBuildCache and clear with :CyberdreamClearCache
-      cache = false,
+      cache = true,
       -- Disable or enable colorscheme extensions
       extensions = {
         telescope = true,

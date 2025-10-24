@@ -20,6 +20,7 @@
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
 # font-family = Iosevka
+font-family = "JetBrainsMonoNL Nerd Font Mono"
 # window-padding-x = 2
 #
 # # Spacing around the equals sign does not matter.
@@ -65,3 +66,6 @@ foreground = #ffffff
 cursor-color = #ffffff
 selection-background = #3c4048
 selection-foreground = #ffffff
+
+background-opacity = 0.8
+background-blur = false
