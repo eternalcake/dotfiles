@@ -14,6 +14,5 @@
     ~/.config/lazydocker: lazydocker
     ~/.config/ghostty: arch/ghostty
     ~/.config/waybar: arch/waybar
-    ~/.config/fsel: arch/fsel
     ~/.config/btop/btop.conf: arch/btop.conf
     ~/.zshrc: arch/.zshrc
