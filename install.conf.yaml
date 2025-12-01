@@ -9,9 +9,11 @@
 
 - link:
     ~/.config/nvim: nvim
-    ~/.config/hypr: hypr
+    ~/.config/hypr: arch/hypr
     ~/.config/lazygit: lazygit
     ~/.config/lazydocker: lazydocker
-    ~/.config/ghostty: ghostty
-    ~/.config/waybar: waybar
-    ~/.zshrc: .zshrc
+    ~/.config/ghostty: arch/ghostty
+    ~/.config/waybar: arch/waybar
+    ~/.config/fsel: arch/fsel
+    ~/.config/btop/btop.conf: arch/btop.conf
+    ~/.zshrc: arch/.zshrc

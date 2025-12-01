@@ -21,7 +21,7 @@ return {
 			local lazygit = Terminal:new({
 				cmd = "lazygit",
 				hidden = true,
-				display_name = "LazyGit",
+				display_name = "",
 				direction = "float",
 				float_opts = {
 					border = "curved",

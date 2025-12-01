@@ -29,6 +29,8 @@ else
 			require("plugins.obsidian"),
 			require("plugins.snacks"),
 			require("plugins.markdown"),
+			require("plugins.indent"),
+			require("plugins.gitdiff"),
 			-- require("plugins.oil"),
 		},
 	}, {
