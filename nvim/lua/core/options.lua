@@ -26,6 +26,7 @@ vim.opt.conceallevel = 0
 vim.api.nvim_set_option("clipboard", "unnamed")
 
 vim.opt.winborder = "rounded"
+vim.opt.termguicolors = true
 
 -- Set 2 tabs for specific files
 vim.api.nvim_create_autocmd("FileType", {
