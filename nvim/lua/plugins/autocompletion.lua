@@ -17,11 +17,15 @@ return { -- Autocompletion
 			["<C-D>"] = { "scroll_documentation_down", "fallback" },
 		},
 
+		cmdline = { enabled = false },
+
 		appearance = {
 			nerd_font_variant = "mono",
 		},
 
 		completion = {
+			accept = { auto_brackets = { enabled = false } },
+			list = { selection = { preselect = false, auto_insert = true } },
 			documentation = {
 				auto_show = false,
 				auto_show_delay_ms = 500,

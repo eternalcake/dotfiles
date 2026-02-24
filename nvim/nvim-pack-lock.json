@@ -1,0 +1,14 @@
+{
+  "plugins": {
+    "cyberdream": {
+      "rev": "2ad7275b5edabfdd1fe9b8ecb90d7b1799c53d45",
+      "src": "https://github.com/scottmckendry/cyberdream.nvim",
+      "version": "'v5.3.0'"
+    },
+    "treesitter": {
+      "rev": "d3218d988f72ed34414959c9ccd802d393432d6e",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    }
+  }
+}

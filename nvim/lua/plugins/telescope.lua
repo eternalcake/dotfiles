@@ -1,9 +1,8 @@
 return {
-	lazy = false,
-	priority = 1000,
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.8",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	lazy = false,
+	tag = "v0.2.0",
+	dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
 	config = function()
 		require("telescope").setup({
 			defaults = {
@@ -18,13 +17,22 @@ return {
 						mirror = true,
 					},
 				},
-				-- TODO add windows/linux different slashes (win \\, lin /)
 				file_ignore_patterns = {
-					-- dirs
 					".git\\",
+					".git/",
 					"__pycache__",
-					-- files
+					"%.mkv",
+					"%.mp4",
+					"%.o",
 					"%.exe",
+					"%.bmp",
+					"%.dll",
+					"%.pyd",
+					"%.png",
+					"%.xlsx",
+					"%.pak",
+					"%.bin",
+					"%.jpg",
 				},
 			},
 			pickers = {
@@ -39,6 +47,8 @@ return {
 				},
 			},
 		})
-		require("core.keymaps.telescope")
+		local builtin = require("telescope.builtin")
+		vim.keymap.set("n", "<space>ff", builtin.find_files, { desc = "Telescope find files" })
+		vim.keymap.set("n", "<space>fg", builtin.live_grep, { desc = "Telescope live grep" })
 	end,
 }

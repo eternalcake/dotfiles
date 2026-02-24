@@ -1,33 +1,26 @@
-local workspace
-
-if is_windows then
-	workspace = {
-		name = "obsidian",
-		path = "C:\\Projects\\Obsidian",
-	}
-else
-	workspace = {
-		name = "obsidian",
-		path = "~/projects/obsidian",
-	}
-end
-
 return {
 	"epwalsh/obsidian.nvim",
-	version = "*",
+	version = "*", -- recommended, use latest release instead of latest commit
 	lazy = true,
-	ft = "markdown",
+	event = {
+		-- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
+		-- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
+		-- refer to `:h file-pattern` for more examples
+		"BufReadPre /home/eternalcake/projects/obsidian/*.md",
+		"BufNewFile /home/eternalcake/projects/obsidian/*.md",
+	},
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
 	opts = {
 		workspaces = {
-			workspace,
+			{
+				name = "obsidian",
+				path = "~/projects/obsidian",
+			},
 		},
 		ui = {
-			enable = false, -- set to false to disable all additional syntax features
-			update_debounce = 200, -- update delay after a text change (in milliseconds)
-			max_file_length = 5000, -- disable UI features for files with more than this many lines
+			enable = false,
 		},
 	},
 }

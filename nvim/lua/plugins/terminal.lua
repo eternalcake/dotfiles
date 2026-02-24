@@ -15,30 +15,13 @@ return {
 			-- Keymap
 			require("toggleterm").setup({
 				open_mapping = [[<c-\>]],
-			})
-			-- LazyGit terminal settings
-			local Terminal = require("toggleterm.terminal").Terminal
-			local lazygit = Terminal:new({
-				cmd = "lazygit",
-				hidden = true,
-				display_name = "",
 				direction = "float",
-				float_opts = {
-					border = "curved",
-					width = 150,
-					height = 40,
-				},
+        float_opts ={
+          border = "curved",
+          width = 160,
+          height = 40,
+        }
 			})
-			function _lazygit_toggle()
-				lazygit:toggle()
-			end
-
-			vim.api.nvim_set_keymap(
-				"n",
-				"<leader>g",
-				"<cmd>lua _lazygit_toggle()<CR>",
-				{ noremap = true, silent = true }
-			)
 		end,
 	},
 }
