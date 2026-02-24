@@ -13,6 +13,7 @@
     ~/.config/lazygit: lazygit
     ~/.config/lazydocker: lazydocker
     ~/.config/ghostty: arch/ghostty
-    ~/.config/waybar: arch/waybar
     ~/.config/btop/btop.conf: arch/btop.conf
     ~/.zshrc: arch/.zshrc
+    ~/.config/tmux/tmux.conf: arch/tmux.conf
+    ~/.config/clipse/config.json: arch/clipse/config.json
