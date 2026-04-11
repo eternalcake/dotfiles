@@ -175,6 +175,14 @@ return {
 		})
 		vim.lsp.enable("yamlls")
 
+		-- vim.lsp.config("marksman", {
+		-- 	capabilities = capabilities,
+		-- 	cmd = { "marksman", "server" },
+		-- 	filetypes = { "markdown", "markdown.mdx", ". },
+		-- 	root_markers = { ".marksman.toml", ".git" },
+		-- })
+		-- vim.lsp.enable("marksman")
+
 		-- == НАСТРОЙКА ВИЗУАЛА ДИАГНОСТИКИ ==
 		vim.diagnostic.config({
 			severity_sort = true, -- Сортировать ошибки по важности

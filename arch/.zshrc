@@ -18,11 +18,15 @@ plugins=(zsh-autosuggestions
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 autoload -U compinit && compinit
 
+# Ignore ctrl + d to exit shell
+set -o ignoreeof
+
 # docker
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 source $ZSH/oh-my-zsh.sh
+source <(kubectl completion zsh)
 
 # promt
 autoload -U promptinit; promptinit
@@ -35,5 +39,5 @@ alias vim="nvim"
 alias ls='ls -lAhF --group-directories-first --color=auto'
 
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true
-eval "$(fzf --zsh)"
+# eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
