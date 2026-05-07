@@ -61,46 +61,51 @@ return {
 				basedpyright = {
 					disableOrganizeImports = true,
 					analysis = {
-						typeCheckingMode = "strict",
+						typeCheckingMode = "off",
 						diagnosticMode = "openFilesOnly",
-						autoImportCompletions = true,
+						autoImportCompletions = false,
 						autoSearchPaths = false,
 						useLibraryCodeForTypes = true,
-
 						diagnosticSeverityOverrides = {
-							reportUnusedImport = "none",
-							reportUnknownArgumentType = "warning",
-							reportUnknownLambdaType = "warning",
-							reportUnknownMemberType = "warning",
-							reportUnknownVariableType = "warning",
-							reportUnusedVariable = "none",
-							reportImplicitStringConcatenation = "warning",
-							reportImplicitOverride = "error",
-							reportImportCycles = "error",
-							reportPropertyTypeMismatch = "error",
-							reportUnreachable = "error",
+							reportAttributeAccessIssue = "error",
+							reportMissingImports = "error",
 						},
 					},
 				},
 			},
 		})
-		vim.lsp.enable("basedpyright")
+		-- vim.lsp.enable("basedpyright")
 
-		-- 2. Ruff
+		-- Ruff
 		vim.lsp.config("ruff", {
 			capabilities = capabilities,
 			init_options = {
 				settings = {
 					-- First check project settings, after - ide settings
 					configurationPreference = "filesystemFirst",
-					-- включаем линтинг и автофиксы
 					lint = {
 						enable = true,
-						select = { "ANN", "E", "F" },
-						ignore = { "E501" },
+						select = {
+							-- "ALL",
+							"E",
+							"F",
+							"W",
+							"I",
+							"B",
+							"UP",
+							"ANN",
+							"SIM",
+							"C4",
+							"PIE",
+						},
+						ignore = {
+							"ANN101", -- self
+							"ANN102", -- cls
+							"E501", -- длина строки
+              "F812", -- unresolved reference, handled by ty
+						},
 					},
 					fixAll = true,
-					-- отключаем форматирование, если используете отдельный formatter
 					format = {
 						enable = false,
 					},
@@ -108,6 +113,23 @@ return {
 			},
 		})
 		vim.lsp.enable("ruff")
+
+		-- ty
+		vim.lsp.config("ty", {
+			settings = {
+				ty = {
+					-- configuration = {
+					-- 	rules = {
+					-- ["possibly-missing-attribute"] = "error",
+					-- ["possibly-missing-import"] = "error",
+					-- ["possibly-unresolved-reference"] = "error",
+					-- ["unsupported-dynamic-base"] = "error",
+					-- 	},
+					-- },
+				},
+			},
+		})
+		vim.lsp.enable("ty")
 
 		-- Lua LS
 		vim.lsp.config("lua_ls", {
@@ -141,6 +163,7 @@ return {
 		vim.filetype.add({
 			pattern = {
 				["%.gitlab%-ci%.ya?ml"] = "yaml.gitlab",
+				[".*/%.gitlab/.*%.ya?ml"] = "yaml.gitlab",
 			},
 		})
 		vim.lsp.config("gitlab_ci_ls", {
@@ -154,14 +177,22 @@ return {
 			},
 			filetypes = { "yaml.gitlab" },
 		})
-		--vim.lsp.enable("gitlab_ci_ls")
+		vim.lsp.enable("gitlab_ci_ls")
 
 		vim.lsp.config("yamlls", {
 			settings = {
 				yaml = {
 					schemaStore = { enable = true, url = "https://www.schemastore.org/" },
 					schemas = {
-						["https://gitlab.com/gitlab-org/gitlab-foss/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
+						["https://gitlab.com/gitlab-org/gitlab-foss/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = {
+							".gitlab-ci.yml",
+							"/.gitlab/*/*.yml",
+							"/.gitlab/*/*.yaml",
+						},
+						["https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json"] = {
+							"docker-compose.yaml",
+							"docker-compose.yml",
+						},
 					},
 					format = {
 						enable = false,
@@ -174,6 +205,39 @@ return {
 			},
 		})
 		vim.lsp.enable("yamlls")
+
+		vim.filetype.add({
+			pattern = {
+				["Dockerfile.*"] = "dockerfile",
+				["Dockerfile"] = "dockerfile",
+				[".*Dockerfile"] = "dockerfile",
+			},
+		})
+		vim.lsp.config("dockerls", {
+			cmd = { "docker-language-server", "start", "--stdio" },
+			filetypes = {
+				"dockerfile",
+				"yaml.docker-compose",
+				"bake",
+			},
+			single_file_support = true,
+			initializationOptions = {
+				dockercomposeExperimental = {
+					composeSupport = true,
+				},
+				dockerfileExperimental = {
+					removeOverlappingIssues = true,
+				},
+				telemetry = "off",
+			},
+			capabilities = {
+				experimental = {
+					dockerLanguageServerCapabilities = {
+						commands = "dockerLspClient.bake.build",
+					},
+				},
+			},
+		})
 
 		-- vim.lsp.config("marksman", {
 		-- 	capabilities = capabilities,

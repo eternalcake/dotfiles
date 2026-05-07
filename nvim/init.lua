@@ -6,11 +6,11 @@ else
 	require("lazy").setup({
 		{
 			require("plugins.colortheme"),
-			-- require("plugins.treesitter"),
+			require("plugins.treesitter"),
 			require("plugins.telescope"),
 			require("plugins.indent"),
 
-			require("plugins.lsp"),
+			require("plugins.lsp.lsp"),
 			require("plugins.terminal"),
 			require("plugins.comment"),
 			require("plugins.oil"),
