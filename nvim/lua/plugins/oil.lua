@@ -15,7 +15,7 @@ return {
 			["<C-t>"] = { "actions.select", opts = { tab = true } },
 			["<C-p>"] = { "actions.preview", opts = { horizontal = true } },
 			-- ["<C-c>"] = { "actions.close", mode = "n" },
-			["<C-l>"] = "actions.refresh",
+			-- ["<C-l>"] = "actions.refresh",
 			["-"] = { "actions.parent", mode = "n" },
 			["_"] = { "actions.open_cwd", mode = "n" },
 			["`"] = { "actions.cd", mode = "n" },
@@ -28,6 +28,15 @@ return {
 		use_default_keymaps = false,
 		view_options = {
 			show_hidden = true,
+			is_hidden_file = function(name, bufnr)
+				local m = name:match("^%.")
+				return m ~= nil
+			end,
+			is_always_hidden = function(name, bufnr)
+				local m = name:match("^%.DS_Store")
+				return m ~= nil
+			end,
+			case_insensitive = false,
 		},
 		preview_win = {
 			update_on_cursor_moved = true,
@@ -39,4 +48,5 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
+	vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }),
 }

@@ -1,0 +1,55 @@
+#!/usr/bin/env sh
+sudo yabai --uninstall-sa
+sudo yabai --install-sa
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+# bsp or float (default: float)
+yabai -m config layout float
+
+# Override default layout for space 2 only
+# yabai -m config --space 2 layout float
+
+# New window spawns to the right if vertical split, or bottom if horizontal split
+yabai -m config window_placement second_child
+
+# Set all padding and gaps to 20pt (default: 0)
+yabai -m config top_padding    0
+yabai -m config bottom_padding 0
+yabai -m config left_padding   0
+yabai -m config right_padding  0
+yabai -m config window_gap     3
+yabai -m config window_border off
+
+# set mouse interaction modifier key (default: fn)
+yabai -m config mouse_modifier fn
+
+# set modifier + left-click drag to move window (default: move)
+yabai -m config mouse_action1 move
+
+# set modifier + right-click drag to resize window (default: resize)
+yabai -m config mouse_action2 resize
+
+# set focus follows mouse mode (default: off, options: off, autoraise, autofocus)
+yabai -m config focus_follows_mouse autoraise
+
+# set mouse follows focus mode (default: off)
+yabai -m config mouse_follows_focus off
+
+# modify window shadows (default: on, options: on, off, float)
+# example: show shadows only for floating windows
+yabai -m config window_shadow on
+
+# window opacity (default: off)
+# example: render all unfocused windows with 90% opacity
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 0.9
+yabai -m config normal_window_opacity 0.9
+
+# disable the menubar
+yabai -m config menubar_opacity 1
+
+# Настройки мыши (аналог bindm = SUPER, mouse:272...)
+yabai -m config mouse_modifier ctrl
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize

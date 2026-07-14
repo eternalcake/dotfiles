@@ -14,13 +14,16 @@ else
 			require("plugins.terminal"),
 			require("plugins.comment"),
 			require("plugins.oil"),
+			-- require("plugins.opencode"),
+			-- require("plugins.codecompanion"),
+			-- require("plugins.markdown"),
       -- require("plugins.obsession"),
 
 			require("plugins.autocompletion"),
 			require("plugins.conform"),
 			-- require("plugins.statusline"),
       require("plugins.tmux"),
-      require("plugins.obsidian"),
+      -- require("plugins.obsidian"),
 			-- require("plugins.noice"),
 		},
 	}, {

@@ -1,0 +1,23 @@
+# Only 4 spaces!
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: zsh/.zshrc
+    ~/.config/nvim: nvim
+    ~/.gitignore: git/.gitignore
+    ~/.gitconfig: git/.gitconfig
+    ~/.config/lazygit/config.yml: lazygit/config.yml
+    ~/.config/lazydocker/config.yml: lazydocker/config.yml
+    ~/.config/sshm/config.json: sshm/config.json
+    ~/.config/ghostty/config: ghostty/config
+    ~/.config/btop/btop.conf: btop/btop.conf
+    ~/.config/tmux/tmux.conf: tmux/tmux.conf
+    ~/.config/clipse/config.json: clipse/config.json
+    ~/.config/opencode/opencode.json: opencode/opencode.json
+    ~/.config/hypr: os/arch/hypr

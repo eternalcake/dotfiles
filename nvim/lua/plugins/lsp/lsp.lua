@@ -99,10 +99,7 @@ return {
 							"PIE",
 						},
 						ignore = {
-							"ANN101", -- self
-							"ANN102", -- cls
 							"E501", -- длина строки
-              "F812", -- unresolved reference, handled by ty
 						},
 					},
 					fixAll = true,

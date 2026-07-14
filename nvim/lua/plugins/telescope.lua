@@ -38,6 +38,11 @@ return {
 			pickers = {
 				find_files = {
 					hidden = true,
+					mappings = {
+						i = {
+							["<D-CR>"] = require("telescope.actions").select_tab,
+						},
+					},
 				},
 				grep_string = {
 					additional_args = { "--hidden" },
@@ -50,5 +55,6 @@ return {
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<space>ff", builtin.find_files, { desc = "Telescope find files" })
 		vim.keymap.set("n", "<space>fg", builtin.live_grep, { desc = "Telescope live grep" })
+		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 	end,
 }

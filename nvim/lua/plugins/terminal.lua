@@ -14,12 +14,12 @@ return {
 			end
 			-- Keymap
 			require("toggleterm").setup({
-				open_mapping = [[<c-\>]],
+				open_mapping = [[<D-\>]],
 				direction = "float",
         float_opts ={
           border = "curved",
-          width = 160,
-          height = 40,
+          width = 140,
+          height = 35,
         }
 			})
 		end,
