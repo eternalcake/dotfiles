@@ -1,1 +1,10 @@
 .DS_Store
+.python-version
+publickey
+privatekey
+*.pem
+*.bin
+*.key
+*.crt
+.venv
+venv

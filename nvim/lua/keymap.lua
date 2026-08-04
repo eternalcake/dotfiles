@@ -30,3 +30,7 @@ vim.keymap.set("v", "p", '"_dP', opts)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moves lines down in visual selection" })
 -- Move selected lines up
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "moves lines up in visual selection" })
+-- Go to next tab with Ctrl+n
+vim.keymap.set('n', '<C-n>', 'gt', { noremap = true, silent = true })
+-- Go to previous tab with Ctrl+p
+vim.keymap.set('n', '<C-p>', 'gT', { noremap = true, silent = true })

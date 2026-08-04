@@ -14,7 +14,7 @@ return {
 			end
 			-- Keymap
 			require("toggleterm").setup({
-				open_mapping = [[<D-\>]],
+				open_mapping = [[<C-\>]],
 				direction = "float",
         float_opts ={
           border = "curved",

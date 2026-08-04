@@ -21,8 +21,9 @@ else
 
 			require("plugins.autocompletion"),
 			require("plugins.conform"),
-			-- require("plugins.statusline"),
+			require("plugins.statusline"),
       require("plugins.tmux"),
+      -- require("plugins.smartsplits"),
       -- require("plugins.obsidian"),
 			-- require("plugins.noice"),
 		},
