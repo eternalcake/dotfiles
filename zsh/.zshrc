@@ -7,8 +7,10 @@ HYPHEN_INSENSITIVE="false"
 zstyle ':omz:update' mode disabled
 ENABLE_CORRECTION="false"
 
-plugins=(zsh-autosuggestions
+plugins=(
+    zsh-autosuggestions
     zsh-vi-mode
+    zsh-syntax-highlighting
     docker
     docker-compose
     ssh
@@ -31,8 +33,9 @@ source <(kubectl completion zsh)
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
-
-. "$HOME/.cargo/env"
+print() {
+  [[ $# -eq 0 && ${funcstack[-1]} = prompt_pure_precmd ]] || builtin print "$@"
+}
 
 # aliases
 alias vim="nvim"
@@ -66,7 +69,6 @@ case "$OSTYPE" in
     PATH="/opt/homebrew/opt/python@3.14/libexec/bin:$PATH"
     PATH="/opt/homebrew/opt/openssh/libexec/bin:$PATH"
     PATH="/opt/homebrew/opt/inetutils/libexec/gnubin:$PATH"
-    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     ;;
   linux*)
     # Linux-specific settings
