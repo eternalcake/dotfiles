@@ -7,15 +7,20 @@ hl.config({
     col = {
       active_border = "rgba(88888888)",
     },
-    gaps_in  = 0,
-    gaps_out = 0,
+    gaps_in  = 1,
     resize_on_border        = true,
     extend_border_grab_area = 15,
+    gaps_out = {
+        top = 4,
+        left = 0,
+        right = 0,
+        bottom = 0
+    }
   },
 
   decoration = {
-    rounding        = 0,
-    rounding_power  = 4,
+    rounding        = 20,
+    rounding_power  = 2,
     active_opacity  = 1.0,
     inactive_opacity = 1.0,
     dim_inactive    = true,

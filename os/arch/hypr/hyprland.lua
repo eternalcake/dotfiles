@@ -5,7 +5,7 @@ hl.monitor({
 	output = "",
 	mode = "2880x1800@120",
 	position = "auto",
-	scale = 1.666,
+	scale = 1.8,
 })
 
 -------------------------
@@ -19,34 +19,38 @@ require("conf.decoration")
 -------------------
 ---- AUTOSTART ----
 -------------------
+-- loadfile(os.getenv("HOME") .. "/.local/share/ambxst/hyprland.lua")()
+
 hl.on("hyprland.start", function()
-	hl.exec_cmd("noctalia")
+	-- hl.exec_cmd("noctalia")
 	hl.exec_cmd(env.terminal)
 	-- hl.exec_cmd("hyprpanel")
 	-- hl.exec_cmd("hypridle")
 	-- hl.exec_cmd("hyprpaper")
+  -- loadfile(os.getenv("HOME") .. "/.local/share/ambxst/hyprland.lua")()
+	hl.exec_cmd("ambxst")
+	hl.exec_cmd("clipse -listen")
 	hl.exec_cmd("hyprctl setcursor " .. env.cursorTheme .. " " .. env.cursorSize)
 	hl.exec_cmd("[workspace 2 silent] chromium")
-	hl.exec_cmd("[workspace 10 silent] Telegram")
+	hl.exec_cmd("[workspace 10 silent] materialgram")
 end)
 
 hl.config({
 	input = {
 		kb_layout = "us,ru",
-		kb_options = "grp:alt_shift_toggle",
+		kb_options = "grp:caps_toggle",
 		follow_mouse = 1,
 		repeat_delay = 200,
-		repeat_rate = 50,
+		repeat_rate = 60,
 		touchpad = {
 			natural_scroll = true,
-			scroll_factor = 0.1,
+			scroll_factor = 0.125,
 		},
 	},
 
 	misc = {
 		force_default_wallpaper = 0,
 		disable_hyprland_logo = true,
-		vfr = true,
 	},
 
 	cursor = {
@@ -60,7 +64,6 @@ hl.config({
 	},
 
 	dwindle = {
-		pseudotile = true,
 		preserve_split = true,
 	},
 

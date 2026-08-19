@@ -16,7 +16,6 @@ plugins=(
     ssh
 )
 
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 autoload -U compinit && compinit
 
 # Ignore ctrl + d to exit shell
@@ -27,10 +26,9 @@ zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 source $ZSH/oh-my-zsh.sh
-source <(kubectl completion zsh)
+# source <(kubectl completion zsh)
 
 # promt
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 print() {
@@ -43,6 +41,8 @@ alias ls='ls -lAhF --color=auto --group-directories-first'
 
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/projects/soft/llama.cpp/build/bin:$PATH"
+PATH="/opt/cuda/bin:$PATH"
+LD_LIBRARY_PATH="/opt/cuda/lib64:$LD_LIBRARY_PATH"
 
 export OPENCODE_EXPERIMENTAL=true
 export OPENCODE_ENABLE_EXA=true
@@ -54,6 +54,7 @@ eval "$(zoxide init --cmd cd zsh)"
 case "$OSTYPE" in
   darwin*)
     # macOS-specific settings
+    fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
     # gnu coreutils without prefix
     PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
