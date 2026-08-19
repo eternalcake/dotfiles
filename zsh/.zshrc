@@ -42,6 +42,7 @@ alias vim="nvim"
 alias ls='ls -lAhF --color=auto --group-directories-first'
 
 PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/projects/soft/llama.cpp/build/bin:$PATH"
 
 export OPENCODE_EXPERIMENTAL=true
 export OPENCODE_ENABLE_EXA=true

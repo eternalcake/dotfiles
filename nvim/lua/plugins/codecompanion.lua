@@ -14,7 +14,7 @@ return {
 				["llama.cpp"] = function()
 					return require("codecompanion.adapters").extend("openai_compatible", {
 						env = {
-							url = "http://127.0.0.1:8131", -- replace with your llama.cpp instance
+							url = "http://127.0.0.1:8080", -- replace with your llama.cpp instance
 							api_key = "TERM",
 							chat_url = "/v1/chat/completions",
 						},

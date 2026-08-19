@@ -24,8 +24,29 @@ gui:
   mainPanelSplitMode: vertical
   showFileTree: false
   nerdFontsVersion: "3"
+  scrollOffMargin: 3
+  mouseEvents: false
+  fileTreeSortOrder: foldersFirst
+  showRandomTip: false
+  spinner:
+    frames:
+      - ⠋
+      - ⠙
+      - ⠹
+      - ⠸
+      - ⠼
+      - ⠴
+      - ⠦
+      - ⠧
+      - ⠇
+      - ⠏
+    rate: 50
 git:
   autoForwardBranches: none
+  diffRenderers:
+    - command: delta --dark --paging=never
+  parseEmoji: true
 os:
   editPreset: 'nvim'
 notARepository: skip
+disableStartupPopups: false

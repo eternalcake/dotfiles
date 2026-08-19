@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	lazy = false,
-	tag = "v0.2.0",
+	tag = "v0.2.1",
 	dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
 	config = function()
 		require("telescope").setup({

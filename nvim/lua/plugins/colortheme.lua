@@ -54,7 +54,7 @@ return {
 			vim.cmd("colorscheme cyberdream")
 			vim.api.nvim_create_autocmd("TextYankPost", {
 				callback = function()
-					vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 200 })
+					vim.hl.hl_op({ higroup = "YankHighlight", timeout = 200 })
 				end,
 			})
 		end,

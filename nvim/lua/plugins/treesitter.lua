@@ -3,41 +3,10 @@ return {
 	dependencies = {}, -- tree-sitter CLI must be installed system-wide
 	config = function()
 		require("tree-sitter-manager").setup({
-			-- Default Options
 			parser_dir = vim.fn.stdpath("data") .. "/site/parser",
 			query_dir = vim.fn.stdpath("data") .. "/site/queries",
 			assume_installed = {}, -- blacklist languages
-			ensure_installed = {
-				bash,
-				bitbake,
-				c,
-				cpp,
-				cmake,
-				comment,
-				csv,
-				dockerfile,
-				ghostty,
-				git_config,
-				gitattributes,
-				gitcommit,
-				gitignore,
-				jinja,
-				jq,
-				json,
-				lua,
-				make,
-				makrdown,
-				nginx,
-				python,
-				regex,
-				requirements,
-				ssh_config,
-				tmux,
-				toml,
-				xml,
-				yaml,
-				zsh,
-			}, -- parsers to install at startup
+			ensure_installed = {}, -- parsers to install at startup
 			auto_install = true, -- auto-install when a new filetype is encountered
 			noauto_install = {}, -- blacklist from auto_install
 			highlight = true, -- enable treesitter highlighting (use list to whitelist)

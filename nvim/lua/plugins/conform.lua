@@ -10,12 +10,6 @@ return {
 			cpp = { "clang-format" },
 		},
 	},
-	--	formatters = {
-	--		isort = {
-	--			command = "isort",
-	--			args = { "--line-ending", "auto" },
-	--		},
-	--	},
 	config = function(_, opts)
 		require("conform").setup(opts)
 		vim.keymap.set({ "n", "v" }, "<leader>t", function()
