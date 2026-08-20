@@ -16,7 +16,7 @@ else
 			require("plugins.autocompletion"),
 			require("plugins.conform"),
 			require("plugins.statusline"),
-			require("plugins.tmux"),
+			-- require("plugins.tmux"),
 			require("plugins.gitsigns"),
 			require("plugins.figutive"),
 			require("plugins.trouble"),
@@ -25,6 +25,7 @@ else
 			require("plugins.statusline2"),
 			require("plugins.noice"),
 			require("plugins.notify"),
+			require("plugins.smartsplits"),
 
 			-- require("plugins.codecompanion"),
 		},
