@@ -27,7 +27,7 @@ else
 			require("plugins.notify"),
 			require("plugins.smartsplits"),
 
-			-- require("plugins.codecompanion"),
+			require("plugins.codecompanion"),
 		},
 	}, {
 		ui = {

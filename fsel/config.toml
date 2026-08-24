@@ -1,0 +1,3 @@
+cursor = "|"
+terminal_launcher = "ghostty -e"
+title_panel_position = "top"
