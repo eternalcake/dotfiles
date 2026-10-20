@@ -81,7 +81,7 @@ return {
 							return mode_map[vim.api.nvim_get_mode().mode] or "_"
 						end,
 					},
-					lualine_b = { { "filetype", icon_only = true }, "filename" },
+					lualine_b = { "filename" },
 					lualine_c = {
 						{
 							"diff",

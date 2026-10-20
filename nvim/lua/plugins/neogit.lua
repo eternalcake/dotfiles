@@ -12,4 +12,5 @@ return {
 	keys = {
 		{ "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" },
 	},
+	log_format = { "delta", "--width", "120", "--hyperlinks=false" },
 }

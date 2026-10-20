@@ -203,6 +203,12 @@ return {
 		})
 		vim.lsp.enable("yamlls")
 
+		vim.lsp.config("bashls", {
+			cmd = { "bash-language-server", "start" },
+			filetypes = { "bash", "sh" },
+		})
+		vim.lsp.enable("bashls")
+
 		vim.filetype.add({
 			pattern = {
 				["Dockerfile.*"] = "dockerfile",
@@ -235,6 +241,14 @@ return {
 				},
 			},
 		})
+		vim.lsp.enable("dockerls")
+
+		vim.lsp.config("make-ls", {
+			cmd = { vim.fn.expand("~/go/bin/make-ls") },
+			filetypes = { "make" },
+			root_markers = { "Makefile", "makefile", "GNUmakefile", ".git" },
+		})
+		vim.lsp.enable("make-ls")
 
 		-- vim.lsp.config("marksman", {
 		-- 	capabilities = capabilities,

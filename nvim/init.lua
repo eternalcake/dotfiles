@@ -18,7 +18,7 @@ else
 			require("plugins.statusline"),
 			-- require("plugins.tmux"),
 			require("plugins.gitsigns"),
-			require("plugins.figutive"),
+			-- require("plugins.figutive"),
 			require("plugins.trouble"),
 			require("plugins.neogit"),
 			require("plugins.diffview"),
@@ -26,6 +26,7 @@ else
 			require("plugins.noice"),
 			require("plugins.notify"),
 			require("plugins.smartsplits"),
+			require("plugins.markdown"),
 
 			require("plugins.codecompanion"),
 		},
