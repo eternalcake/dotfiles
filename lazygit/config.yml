@@ -46,6 +46,9 @@ git:
   diffRenderers:
     - command: delta --dark --paging=never
   parseEmoji: true
+  paging:
+    colorArg: always
+    pager: delta --paging=never
 os:
   editPreset: 'nvim'
 notARepository: skip

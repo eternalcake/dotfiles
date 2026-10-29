@@ -4,6 +4,9 @@
       "q",
       "ctrl+c"
     ],
-    "disable_esc_quit": false
-  }
+    "disable_esc_quit": true
+  },
+  "check_for_updates": false,
+  "focus_search_on_start": false,
+  "ping_on_start": false
 }

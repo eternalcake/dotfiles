@@ -73,7 +73,7 @@ return {
 		},
 		anti_conceal = {
 			-- This enables hiding added text on the line the cursor is on.
-			enabled = true,
+			enabled = false,
 			-- Modes to disable anti conceal feature.
 			disabled_modes = false,
 			-- Number of lines above cursor to show.

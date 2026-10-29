@@ -9,3 +9,15 @@
 [pull]
 [core]
 	excludesFile = ~/.gitignore
+    pager = delta
+
+[diff]
+    colorMoved = default
+
+[delta]
+    dark = true
+    line-numbers = true
+    hyperlinks = true
+    side-by-side = true
+    true-color = always
+    navigate = true

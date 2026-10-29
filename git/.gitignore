@@ -8,3 +8,4 @@ privatekey
 *.crt
 .venv
 venv
+.worktree

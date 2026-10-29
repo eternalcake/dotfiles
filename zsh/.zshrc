@@ -27,10 +27,9 @@ zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 source $ZSH/oh-my-zsh.sh
-source <(kubectl completion zsh)
+# source <(kubectl completion zsh)
 
 # promt
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 print() {
@@ -40,9 +39,11 @@ print() {
 # aliases
 alias vim="nvim"
 alias ls='ls -lAhF --color=auto --group-directories-first'
+alias mc="mcli"
 
 PATH="$HOME/.local/bin:$PATH"
-PATH="$HOME/projects/soft/llama.cpp/build/bin:$PATH"
+PATH="$HOME/projects/soft/cardwire/pkg/cardwire/usr/bin:$PATH"
+PATH="$HOME/go/bin:$PATH"
 
 export OPENCODE_EXPERIMENTAL=true
 export OPENCODE_ENABLE_EXA=true
@@ -55,6 +56,7 @@ case "$OSTYPE" in
   darwin*)
     # macOS-specific settings
 
+    fpath+=("$(brew --prefix)/share/zsh/site-functions")
     # gnu coreutils without prefix
     PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
     PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
@@ -70,6 +72,7 @@ case "$OSTYPE" in
     PATH="/opt/homebrew/opt/python@3.14/libexec/bin:$PATH"
     PATH="/opt/homebrew/opt/openssh/libexec/bin:$PATH"
     PATH="/opt/homebrew/opt/inetutils/libexec/gnubin:$PATH"
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     ;;
   linux*)
     # Linux-specific settings
