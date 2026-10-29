@@ -16,6 +16,7 @@ plugins=(
     ssh
 )
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 autoload -U compinit && compinit
 
 # Ignore ctrl + d to exit shell
@@ -38,11 +39,11 @@ print() {
 # aliases
 alias vim="nvim"
 alias ls='ls -lAhF --color=auto --group-directories-first'
+alias mc="mcli"
 
 PATH="$HOME/.local/bin:$PATH"
-PATH="$HOME/projects/soft/llama.cpp/build/bin:$PATH"
-PATH="/opt/cuda/bin:$PATH"
-LD_LIBRARY_PATH="/opt/cuda/lib64:$LD_LIBRARY_PATH"
+PATH="$HOME/projects/soft/cardwire/pkg/cardwire/usr/bin:$PATH"
+PATH="$HOME/go/bin:$PATH"
 
 export OPENCODE_EXPERIMENTAL=true
 export OPENCODE_ENABLE_EXA=true
@@ -54,8 +55,8 @@ eval "$(zoxide init --cmd cd zsh)"
 case "$OSTYPE" in
   darwin*)
     # macOS-specific settings
-    fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
+    fpath+=("$(brew --prefix)/share/zsh/site-functions")
     # gnu coreutils without prefix
     PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
     PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
@@ -71,6 +72,7 @@ case "$OSTYPE" in
     PATH="/opt/homebrew/opt/python@3.14/libexec/bin:$PATH"
     PATH="/opt/homebrew/opt/openssh/libexec/bin:$PATH"
     PATH="/opt/homebrew/opt/inetutils/libexec/gnubin:$PATH"
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     ;;
   linux*)
     # Linux-specific settings

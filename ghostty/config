@@ -28,6 +28,7 @@ selection-foreground = #ffffff
 background-opacity = 0.85
 background-blur = macos-glass-clear
 
+confirm-close-surface = false
 keybind = cmd+enter=unbind
 
 keybind = cmd+a=text:\x01
