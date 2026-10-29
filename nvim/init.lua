@@ -26,6 +26,7 @@ else
 			require("plugins.noice"),
 			require("plugins.notify"),
 			require("plugins.smartsplits"),
+			require("plugins.markdown"),
 
 			-- require("plugins.codecompanion"),
 		},
