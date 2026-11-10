@@ -27,15 +27,17 @@ hl.on("hyprland.start", function()
 	-- hl.exec_cmd("hyprpanel")
 	-- hl.exec_cmd("hypridle")
 	-- hl.exec_cmd("hyprpaper")
-  -- loadfile(os.getenv("HOME") .. "/.local/share/ambxst/hyprland.lua")()
-	hl.exec_cmd("ambxst")
+	-- loadfile(os.getenv("HOME") .. "/.local/share/ambxst/hyprland.lua")()
+	hl.exec_cmd("noctalia")
+	hl.exec_cmd("hypridle")
 	hl.exec_cmd("clipse -listen")
 	hl.exec_cmd("hyprctl setcursor " .. env.cursorTheme .. " " .. env.cursorSize)
-	hl.exec_cmd("[workspace 2 silent] chromium")
+	hl.exec_cmd("[workspace 2 silent] google-chrome")
 	hl.exec_cmd("[workspace 10 silent] materialgram")
 end)
 
 hl.config({
+	xwayland = { force_zero_scaling = true },
 	input = {
 		kb_layout = "us,ru",
 		kb_options = "grp:caps_toggle",
@@ -44,7 +46,7 @@ hl.config({
 		repeat_rate = 60,
 		touchpad = {
 			natural_scroll = true,
-			scroll_factor = 0.125,
+			scroll_factor = 0.15,
 		},
 	},
 
@@ -80,6 +82,31 @@ hl.window_rule({
 	name = "suppress-maximize-events",
 	match = { class = ".*" },
 	suppress_event = "maximize",
+})
+
+hl.window_rule({
+	match = { class = "chromium" },
+	opacity = "0.9",
+})
+
+hl.window_rule({
+	match = { class = "google-chrome" },
+	opacity = "0.9",
+})
+
+hl.window_rule({
+	match = { title = "materialgram" },
+	opacity = "0.9",
+})
+
+hl.window_rule({
+	match = { class = "md.obsidian.Obsidian" },
+	opacity = "0.9",
+})
+
+hl.window_rule({
+	match = { class = "com.mitchellh.ghostty" },
+	opacity = "0.9",
 })
 
 hl.window_rule({

@@ -12,6 +12,7 @@ hl.env("XCURSOR_THEME", M.cursorTheme)
 hl.env("XCURSOR_SIZE", M.cursorSize)
 hl.env("HYPRCURSOR_THEME", M.cursorTheme)
 hl.env("HYPRCURSOR_SIZE", M.cursorSize)
+hl.env("GDK_WAYLAND_DISABLE", "ext_background_effect_manager_v1")
 
 -- hl.env("LIBVA_DRIVER_NAME", "nvidia")
 -- hl.env("GBM_BACKEND", "nvidia-drm")

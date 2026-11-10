@@ -21,4 +21,4 @@
     ~/.config/clipse/config.json: clipse/config.json
     ~/.config/fsel/config.toml: fsel/config.toml
     ~/.config/opencode/opencode.json: opencode/opencode.json
-    ~/.config/hypr: os/arch/hypr
+    ~/.config/hypr: hypr

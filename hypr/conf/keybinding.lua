@@ -4,7 +4,7 @@
 local env = require("conf.env")
 local mainMod = "SUPER"
 
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(           "CONTROL + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + RETURN",    hl.dsp.exec_cmd(env.terminal))
 hl.bind(mainMod .. " + Q",         hl.dsp.window.close())
 hl.bind(mainMod .. " + M",         hl.dsp.exit())

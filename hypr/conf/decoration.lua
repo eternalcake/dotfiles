@@ -11,7 +11,7 @@ hl.config({
     resize_on_border        = true,
     extend_border_grab_area = 15,
     gaps_out = {
-        top = 4,
+        top = 0,
         left = 0,
         right = 0,
         bottom = 0
@@ -19,7 +19,7 @@ hl.config({
   },
 
   decoration = {
-    rounding        = 20,
+    rounding        = 21,
     rounding_power  = 2,
     active_opacity  = 1.0,
     inactive_opacity = 1.0,
@@ -28,14 +28,14 @@ hl.config({
 
     blur = {
       enabled            = true,
-      size               = 7,
+      size               = 8,
       passes             = 5,
-      noise              = 0.01,
+      noise              = 0.1,
       contrast           = 1.0,
       brightness         = 1.1,
-      vibrancy           = 1.1,
+      vibrancy           = 1.0,
       new_optimizations  = true,
-      ignore_opacity     = false,
+      ignore_opacity     = true,
     },
 
     shadow = {
